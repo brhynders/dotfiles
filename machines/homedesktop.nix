@@ -1,4 +1,4 @@
-{ config, lib, pkgs, modulesPath, ... }:
+{ config, lib, pkgs, modulesPath, inputs, ... }:
 
 {
   # Modules
@@ -27,7 +27,7 @@
     };
     boot.kernelParams = ["nvidia.NVreg_PreserveVideoMemoryAllocations=1" "pcie_aspm=off"];
 
-    # Hardware Specific
+    # Hardware Configuration
 
     boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usb_storage" "usbhid" "sd_mod" ];
     boot.initrd.kernelModules = [ ];
