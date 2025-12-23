@@ -6,6 +6,7 @@
         wget
         git
         google-chrome
+        firefox
         vscode-fhs
         podman
         distrobox
