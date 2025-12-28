@@ -2,6 +2,7 @@
 
 let
   dotfilesHome = config.home.homeDirectory + "/dotfiles/home";
+  dotfilesHomeSlash = dotfilesHome + "/";  # precompute string with trailing slash
 
   # Recursive function to collect all files
   collectFiles = dir:
@@ -16,7 +17,7 @@ let
             acc // collectFiles path
           else
             let
-              relPath = lib.replaceStrings [dotfilesHome + "/"] [""] path;
+              relPath = lib.replaceStrings [dotfilesHomeSlash] [""] path;
             in
               acc // {
                 "${relPath}" = {
