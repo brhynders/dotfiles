@@ -53,7 +53,6 @@
             noctalia.packages.${pkgs.system}.default
             pkgs.alacritty
             pkgs.wl-clipboard
-            pkgs.wl-clipboard-history
             pkgs.wofi
         ];
 
