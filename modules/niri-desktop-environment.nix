@@ -49,8 +49,6 @@
     home-manager.users.brandon = { pkgs, ... }: {
         home.stateVersion = "24.05";
 
-        programs.niri.enable = true;
-
         home.packages = with pkgs; [
             noctalia
             alacritty
