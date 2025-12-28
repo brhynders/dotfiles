@@ -1,4 +1,4 @@
-{ config, lib, pkgs, noctalia, ... }:
+{ config, lib, pkgs, ... }:
 
 {
     environment.systemPackages = with pkgs; [
@@ -12,10 +12,5 @@
         distrobox
         nodejs
         stow
-        noctalia.packages.${pkgs.system}.default
-        alacritty
-        wl-clipboard
-        wofi
-        fuzzel
     ];
 }
