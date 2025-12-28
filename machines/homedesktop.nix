@@ -6,7 +6,6 @@
   imports =
     [
       ../modules/boilerplate.nix
-      ../modules/home.nix
       ../modules/desktop-environment.nix
       ../modules/users.nix
       ../modules/packages.nix
