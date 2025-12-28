@@ -46,7 +46,7 @@
         pulse.enable = true;
     };
 
-    home-manager.users.yourUserName = { pkgs, ... }: {
+    home-manager.users.brandon = { pkgs, ... }: {
         home.stateVersion = "24.05";
 
         programs.niri.enable = true;
