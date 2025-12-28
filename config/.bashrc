@@ -1,1 +1,0 @@
-echo "DOTFILES ARE WORKING!"
