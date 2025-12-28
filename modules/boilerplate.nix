@@ -19,4 +19,10 @@
     i18n.defaultLocale = "en_US.UTF-8";
     services.xserver.xkb.layout = "us";
     services.xserver.xkb.options = "eurosign:e,caps:escape";
+
+    # User
+    users.users.brandon = {
+        isNormalUser = true;
+        extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    };
 }

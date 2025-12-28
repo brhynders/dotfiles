@@ -13,7 +13,7 @@
     outputs = {self, nixpkgs, home-manager, noctalia, ...}:
     {
         nixosConfigurations.homedesktop = nixpkgs.lib.nixosSystem {
-            specialArgs = { inherit home-manager noctalia; };
+            specialArgs = { inherit noctalia; };
             system = "x86_64-linux";
             modules = [./machines/homedesktop.nix];
         };

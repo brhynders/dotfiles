@@ -1,4 +1,4 @@
-{ config, lib, pkgs, home-manager, noctalia, ... }:
+{ config, lib, pkgs, noctalia, ... }:
 
 {
     ############################

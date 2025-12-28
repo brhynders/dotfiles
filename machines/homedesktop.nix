@@ -6,8 +6,7 @@
   imports =
     [
       ../modules/boilerplate.nix
-      ../modules/desktop-environment.nix
-      ../modules/users.nix
+      ../modules/niri-desktop-environment.nix
       ../modules/packages.nix
       (modulesPath + "/installer/scan/not-detected.nix")
     ];
