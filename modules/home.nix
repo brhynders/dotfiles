@@ -7,7 +7,7 @@
     home.stateVersion = "23.05";
     home.file = {
       ".bashrc".source = ../config/.bashrc;
-      "~/.config/niri/niri.conf".source = ../config/niri.kdl
+      "~/.config/niri/niri.conf".source = ../config/niri.kdl;
     };
 
      home.packages = [
