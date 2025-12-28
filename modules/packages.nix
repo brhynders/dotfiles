@@ -11,5 +11,6 @@
         podman
         distrobox
         nodejs
+        stow
     ];
 }
