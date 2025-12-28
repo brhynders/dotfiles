@@ -1,1 +1,0 @@
-echo "NEW DOTS PLEASE"

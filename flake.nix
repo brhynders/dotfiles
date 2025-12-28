@@ -5,7 +5,7 @@
         nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
     };
 
-    outputs = {self, nixpkgs, home-manager, noctalia, ...}:
+    outputs = {self, nixpkgs, ...}:
     {
         nixosConfigurations.homedesktop = nixpkgs.lib.nixosSystem {
             specialArgs = {};

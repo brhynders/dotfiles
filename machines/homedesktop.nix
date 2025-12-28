@@ -1,4 +1,4 @@
-{ config, lib, pkgs, modulesPath, home-manager, ... }:
+{ config, lib, pkgs, modulesPath, ... }:
 
 {
   # Modules
