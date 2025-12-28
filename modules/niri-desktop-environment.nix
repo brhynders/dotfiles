@@ -1,4 +1,4 @@
-{ config, lib, pkgs, home-manager, ... }:
+{ config, lib, pkgs, home-manager, noctalia, ... }:
 
 {
     ############################
@@ -22,7 +22,7 @@
         settings = {
             default_session = {
             command =
-                "${pkgs.greetd.tuigreet}/bin/tuigreet --cmd niri";
+                "${pkgs.tuigreet}/bin/tuigreet --cmd niri";
             };
         };
     };
@@ -49,12 +49,12 @@
     home-manager.users.brandon = { pkgs, ... }: {
         home.stateVersion = "24.05";
 
-        home.packages = with pkgs; [
-            noctalia
-            alacritty
-            wl-clipboard
-            wl-clipboard-history
-            wofi
+        home.packages = [
+            noctalia.packages.${pkgs.system}.default
+            pkgs.alacritty
+            pkgs.wl-clipboard
+            pkgs.wl-clipboard-history
+            pkgs.wofi
         ];
 
         xdg.configFile."niri/config.kdl".text = ''
