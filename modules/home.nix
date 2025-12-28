@@ -24,6 +24,7 @@ in
   imports = [ home-manager.nixosModules.home-manager ];
 
   home-manager.users.brandon = {
+    home.stateVersion = "23.05";
     home.file = collectFiles;
   };
 }
