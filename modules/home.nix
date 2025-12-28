@@ -3,14 +3,15 @@
 let
   dotfilesHome = config.home.homeDirectory + "/dotfiles/home";
 
-  # Use walkDir to get all files, then fold into a map
   collectFiles = builtins.foldl' (acc: path:
     if builtins.isDirectory path then
       acc
     else
+      let
+        relPath = lib.replaceStrings [dotfilesHome + "/"] [""] path;
+      in
       acc // {
-        # Key must be a string (in quotes)
-        "${lib.replaceStrings [dotfilesHome + "/"] [""] path}" = {
+        "${relPath}" = {
           source = path;
           overwrite = true;
         };
