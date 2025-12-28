@@ -2,13 +2,14 @@
 
 let
   dotfilesHome = config.home.homeDirectory + "/dotfiles/home";
+  dotfilesHomeSlash = dotfilesHome + "/"; # <-- precompute the slash version
 
   collectFiles = builtins.foldl' (acc: path:
     if builtins.isDirectory path then
       acc
     else
       let
-        relPath = lib.replaceStrings [dotfilesHome + "/"] [""] path;
+        relPath = lib.replaceStrings [dotfilesHomeSlash] [""] path;
       in
       acc // {
         "${relPath}" = {
